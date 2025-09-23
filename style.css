@@ -1,0 +1,147 @@
+:root {
+    /* Global variables */
+    --white: hsl(0, 0%, 100%);
+    /* Use lowercase for consistency */
+}
+
+html {
+    color-scheme: dark light;
+    /* Prioritises dark mode but allows light mode */
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    /* Ensures padding & border remain within element's size */
+}
+
+* {
+    margin: 0;
+    /* Remove browser's default margin, padding, and font settings */
+    padding: 0;
+    font: inherit;
+    /* Ensures forms, buttons, etc., match the document font */
+}
+
+img,
+picture,
+svg,
+video {
+    display: block;
+    /* Prevents inline spacing issues */
+    max-width: 100%;
+    /* Ensures media scales within parent container */
+}
+
+
+
+/************************** Global ***************************/
+
+:root {
+    /* Colors */
+    --White: hsl(0, 0%, 100%);
+
+}
+
+/* Text Styles */
+.poppins-200 {
+    font-family: "Poppins", sans-serif;
+    font-weight: 200;
+    font-style: normal;
+}
+
+/********************* Standard Resets ***********************/
+
+*,
+*::before,
+*::after {
+    /* Ensures padding & border remain within element's size */
+    box-sizing: border-box;
+}
+
+* {
+    /* Remove browser's default margin, padding, and font settings */
+    margin: 0;
+    padding: 0;
+    /* Ensures forms, buttons, etc., match the document font */
+    font: inherit;
+}
+
+html,
+body {
+    height: 100%;
+    min-height: 100svh;
+}
+
+body {
+    display: grid;
+    place-items: center;
+}
+
+img,
+picture,
+svg,
+video {
+    /* Prevents inline spacing issues */
+    display: block;
+    /* Ensures media scales within parent container */
+    max-width: 100%;
+}
+
+/********************** Test & Debug *************************/
+
+/* * {
+    outline: 1px solid green;
+    background-color: hsl(155, 68%, 71%);
+} */
+
+/*************************************************************/
+
+footer {
+    margin-top: 1rem;
+    position: fixed;
+    bottom: 1rem;
+    left: 0;
+    right: 0;
+    text-align: center;
+}
+
+.attribution {
+    font-size: 0.6875rem;
+    text-align: center;
+}
+
+.attribution a {
+    text-decoration: none;
+}
+
+.attribution a:hover,
+.attribution a:focus {
+    color: black;
+    outline: none;
+}
+
+/************************ Responsive *************************/
+
+/* Tablet (min-width: 768px) */
+@media (min-width: 48rem) {
+
+    .someclass {
+        font-size: 14px;
+        letter-spacing: 0;
+        min-width: 384px;
+        padding: 40px;
+    }
+}
+
+/* Desktop (min-width: 992px) */
+@media (min-width: 62rem) {
+
+    .someclass {
+        font-size: 14px;
+        letter-spacing: 0;
+        min-width: 384px;
+        padding: 40px;
+    }
+}
