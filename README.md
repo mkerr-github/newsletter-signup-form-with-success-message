@@ -32,7 +32,7 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
+- Solution URL: [https://www.frontendmentor.io/solutions/newsletter-sign-up-form-with-success-message-solution-XZJH1F3Umq](https://www.frontendmentor.io/solutions/newsletter-sign-up-form-with-success-message-solution-XZJH1F3Umq)
 - Live Site URL: [https://mkerr-github.github.io/newsletter-signup-form-with-success-message/](https://mkerr-github.github.io/newsletter-signup-form-with-success-message/)
 
 
