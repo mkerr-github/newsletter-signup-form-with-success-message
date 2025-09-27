@@ -97,6 +97,7 @@ input[type=submit],
 button {
     color: var(--white);
     background-color: var(--blue_800);
+    cursor: pointer;
 }
 
 input[type=submit]:hover,
@@ -288,7 +289,6 @@ button {
         grid-column: 1;
         grid-row: 1;
         max-width: 27.5rem;
-
         padding: 4.46875rem 4rem 4.46875rem 0;
     }
 

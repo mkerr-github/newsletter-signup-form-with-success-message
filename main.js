@@ -14,17 +14,31 @@ document.addEventListener("DOMContentLoaded", () => {
     const successMessage = successArticle.querySelector(".success__message");
     successMessage.setAttribute("aria-live", "polite");
 
-    // Enable/disable submit button based on email validity
+    // Enable/disable submit button based on trimmed email validity
     emailInput.addEventListener("input", () => {
-        submitBtn.disabled = !emailInput.validity.valid;
+        const isValid = emailInput.value.trim() !== "" && emailInput.validity.valid;
+        submitBtn.disabled = !isValid;
+
+        // Show or hide the error span
+        const errorSpan = form.querySelector(".form__error");
+        if (!isValid) {
+            errorSpan.style.display = "block";
+        } else {
+            errorSpan.style.display = "none";
+        }
     });
 
     // Form submit handler
     form.addEventListener("submit", (event) => {
         event.preventDefault();
-        if (!emailInput.validity.valid) return;
 
         const emailValue = emailInput.value.trim();
+
+        // Check validity AFTER trimming
+        if (emailValue === "" || !emailInput.validity.valid) {
+            emailInput.reportValidity(); // shows error if empty or invalid
+            return;
+        }
 
         // Show the success box first
         successEmailSpan.textContent = emailValue;
@@ -48,6 +62,7 @@ document.addEventListener("DOMContentLoaded", () => {
             .then(data => {
                 // Open a new tab with beginner-friendly explanation
                 const newWindow = window.open();
+                
                 newWindow.document.write(`
                 <html>
                 <head>
